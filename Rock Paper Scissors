@@ -1,0 +1,79 @@
+# # #rock
+r="""
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+"""
+
+# # # Paper
+p="""
+     _______
+---'    ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+"""
+
+# # # Scissors
+s="""
+    _______
+---'   ____)____
+          ______)
+      __________)
+      (____)
+---.__(___)
+"""
+#--------------------------------------------------------------------------------
+
+import random
+#random integers: 1->rock, 2->papper, 3->scissor
+
+user = input("Rock, paper or scissors? ").lower()
+
+# If user chooses rock =>
+if user == "rock":
+    print(r)
+
+#machine chooses =>    
+    machine = random.randint(1,3)
+    if machine == 1:
+        print(r)
+    elif machine == 2:
+        print(p)
+    else:
+        print(s)
+        
+# If user chooses paper =>    
+elif user == "paper":
+    print(p)
+
+#machine chooses =>    
+    machine = random.randint(1,3)
+    if machine == 1:
+        print(r)
+    elif machine == 2:
+        print(p)
+    else:
+        print(s)
+    
+
+# If user chooses scissor =>    
+elif user == "scissor":
+    print(s)
+    
+#machine chooses =>    
+    machine = random.randint(1,3)
+    if machine == 1:
+        print(r)
+    elif machine == 2:
+        print(p)
+    else:
+        print(s)
+    
+    
+else:
+    print("Please enter a valid value :/")
